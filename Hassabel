@@ -1,0 +1,131 @@
+-- Create a basic window with common elements
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/deividcomsono/Obsidian/refs/heads/main/Library.lua"))()
+
+local Window = Library:CreateWindow({
+    Title = "Hassabel", -- GUI Title
+    Footer = "v1.0.0",
+    Center = true,
+    AutoShow = true
+})
+
+-- Universal tab
+local UniversalTab = Window:AddTab("Universal", "home")
+
+-- Left groupbox
+local LeftGroupbox = UniversalTab:AddLeftGroupbox("Universal")
+LeftGroupbox:AddButton({
+    Text = "Infinite Yield",
+    Func = function()
+        loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Infinite-Yield-43437"))()
+    end
+})
+
+LeftGroupbox:AddButton({
+    Text = "Anti AFK",
+    Func = function()
+        local Players = game:GetService("Players")
+        local lplr = Players.LocalPlayer
+
+        while not lplr do
+            task.wait()
+            lplr = Players.LocalPlayer
+        end
+
+        for _, v in getconnections(lplr.Idled) do
+            v:Disable()
+        end
+
+        Library:Notify("Anti AFK Enabled!")
+    end
+})
+
+LeftGroupbox:AddButton({
+    Text = "Nameless Admin",
+    Func = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/FilteringEnabled/NamelessAdmin/main/Source"))()
+    end
+})
+
+-- Info groupbox
+local RightGroupbox = UniversalTab:AddRightGroupbox("Information")
+RightGroupbox:AddLabel("https://discord.gg/MDjA6rbUjX")
+
+-- Hunty Zombie tab
+local HuntyTab = Window:AddTab("Hunty Zombie", "skull")
+
+local HuntyGroupbox = HuntyTab:AddLeftGroupbox("Hunty Zombie")
+HuntyGroupbox:AddButton({
+    Text = "Solix Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/debunked69/solixloader/refs/heads/main/solix%20v2%20new%20loader.lua"))()
+    end
+})
+
+HuntyGroupbox:AddButton({
+    Text = "Zen Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://zuwz.me/Ls-Zee-Hub-HZ"))()
+    end
+})
+
+-- Steal A Brainrot tab
+local BrainrotTab = Window:AddTab("Steal A Brainrot", "zap")
+
+local BrainrotGroupbox = BrainrotTab:AddLeftGroupbox("Steal A Brainrot")
+BrainrotGroupbox:AddButton({
+    Text = "Ugly Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/53325754de16c11fbf8bf78101c1c881.lua"))()
+    end
+})
+
+-- Blade Ball tab
+local BladeBallTab = Window:AddTab("Blade Ball", "sword")
+
+local BladeBallGroupbox = BladeBallTab:AddLeftGroupbox("Blade Ball")
+BladeBallGroupbox:AddButton({
+    Text = "Kalitor Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/752014d33257f8c2a64fbd9ae8784bb4.lua"))()
+    end
+})
+
+-- Volleyball Legends tab
+local VolleyballTab = Window:AddTab("Volleyball Legends", "volleyball")
+
+local VolleyballGroupbox = VolleyballTab:AddLeftGroupbox("Volleyball Legends")
+
+VolleyballGroupbox:AddButton({
+    Text = "Yon Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/be9f75cf2b14e58f62e05e296ce0660b.lua"))()
+    end
+})
+
+VolleyballGroupbox:AddLabel("Hitbox Ball Script")
+
+-- Blox Fruit tab
+local BloxFruitTab = Window:AddTab("Blox Fruit", "sword") -- icon can be changed if needed
+
+local BloxFruitGroupbox = BloxFruitTab:AddLeftGroupbox("Blox Fruit")
+
+BloxFruitGroupbox:AddButton({
+    Text = "Vector Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/AAwful/Vector_Hub/0/v2"))()
+    end
+})
+
+-- Settings tab
+local SettingsTab = Window:AddTab("Settings", "settings", "Customize the UI")
+
+local MyTabbox = SettingsTab:AddLeftTabbox("Settings")
+local ConfigTab = MyTabbox:AddTab("Config")
+local ThemeTab = MyTabbox:AddTab("Theme")
+
+ConfigTab:AddButton({
+    Text = "Save Config",
+    Func = function()
+        Library:Notify("Config saved!")
+    end
+})
