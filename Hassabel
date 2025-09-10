@@ -48,6 +48,16 @@ LeftGroupbox:AddButton({
 local RightGroupbox = UniversalTab:AddRightGroupbox("Information")
 RightGroupbox:AddLabel("https://discord.gg/MDjA6rbUjX")
 
+-- Forsaken tab (NEW) right below Universal
+local ForsakenTab = Window:AddTab("Forsaken", "ghost")
+local ForsakenGroupbox = ForsakenTab:AddLeftGroupbox("Forsaken")
+ForsakenGroupbox:AddButton({
+    Text = "Nxp Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/fuckg1thub/NeptX/refs/heads/main/NeptZ/Forsaken/source.lua"))()
+    end
+})
+
 -- Settings tab
 local SettingsTab = Window:AddTab("Settings", "settings")
 local MyTabbox = SettingsTab:AddLeftTabbox("Settings")
@@ -60,7 +70,6 @@ ConfigTab:AddButton({
         Library:Notify("Config saved!")
     end
 })
-
 ThemeTab:AddLabel("Customize the GUI Theme here!")
 
 -- Hunty Zombie tab
@@ -82,7 +91,6 @@ HuntyGroupbox:AddButton({
 -- Steal A Brainrot tab
 local BrainrotTab = Window:AddTab("Steal A Brainrot", "zap")
 local BrainrotGroupbox = BrainrotTab:AddLeftGroupbox("Steal A Brainrot")
-
 BrainrotGroupbox:AddButton({
     Text = "Ugly Hub",
     Func = function()
@@ -126,7 +134,7 @@ BrainrotGroupbox:AddButton({
     end
 })
 
--- Blade Ball tab (icon changed to sword)
+-- Blade Ball tab
 local BladeBallTab = Window:AddTab("Blade Ball", "sword")
 local BladeBallGroupbox = BladeBallTab:AddLeftGroupbox("Blade Ball")
 BladeBallGroupbox:AddButton({
@@ -155,6 +163,18 @@ VolleyballGroupbox:AddButton({
     Text = "Yon Hub",
     Func = function()
         loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/be9f75cf2b14e58f62e05e296ce0660b.lua"))()
+    end
+})
+VolleyballGroupbox:AddButton({
+    Text = "Napoleon Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/raydjs/napoleonHub/refs/heads/main/src.lua"))()
+    end
+})
+VolleyballGroupbox:AddButton({
+    Text = "Rinns Hub",
+    Func = function()
+        loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/e1cfd93b113a79773d93251b61af1e2f.lua"))()
     end
 })
 VolleyballGroupbox:AddLabel("Hitbox Ball Script")
