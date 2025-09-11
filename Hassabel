@@ -155,6 +155,12 @@ BladeBallGroupbox:AddButton({
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Fsploit/F-R-O-S-T-W-A-R-E/refs/heads/main/Main"))()
     end
 })
+BladeBallGroupbox:AddButton({
+    Text = "NodeX Hub",
+    Func = function()
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/NodeX-Enc/NodeX/refs/heads/main/Main.lua'))()
+    end
+})
 
 -- Volleyball Legends tab
 local VolleyballTab = Window:AddTab("Volleyball Legends", "volleyball")
